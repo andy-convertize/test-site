@@ -2,9 +2,10 @@
 <head>
 <script>
 	
-	document.cookie = 'andy=test;domain=.github.io;path=/;secure';
-	alert(document.cookie);
-
+	var date = new Date();
+	document.cookie = 'andy=' + date + ';domain=andy-convertize.github.io;path=/;secure';
+	console.log("Set Cookie on github.io");
+	
 </script>
 <script src="//pixel-dev.convertize.io/40.js" charset="UTF-8"></script>
 </head>
