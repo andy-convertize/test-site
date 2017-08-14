@@ -2,17 +2,44 @@
 <head>
 <script>
 	
-	var date = new Date();
-	document.cookie = 'andy=' + date + ';domain=.github.io;path=/;secure';
-	console.log("Set Cookie on github.io");
+ function getTopLevelDomain() {
+        var h;
+        var test_cookie = 'get_top_level_domain=cookie';
+        var hostname = document.location.hostname.split('.');
+	console.log(hostname);
+       for (var i = hostname.length - 1; i >= 0; i--) {
+            h = hostname.slice(i).join('.');
+        	console.log(h);    
+		document.cookie = test_cookie + ';domain=.' + h + ';';
+            if (document.cookie.indexOf(test_cookie) > -1) {
+                //document.cookie = test_cookie.split('=')[0] + '=;domain=.' + h + ';expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+                return h;
+            }
+        }
+	document.cookie = 'no_TLD=true;'
+	//return "";
+    }
+    
+
+var td = getTopLevelDomain();
+    
+if(td) {
+	console.log("---- TD found");
+}
+else
+{
+	console.log("---- TD Not Found");
+}
+
+ console.log("top Level " + getTopLevelDomain());
 	
 </script>
-<script src="//pixel-dev.convertize.io/40.js" charset="UTF-8"></script>
+<script src="//pixel-dev.convertize.io/22.js" charset="UTF-8"></script>
 </head>
 <body>
 <h1>HELLO WORLD</h1>
 <p>
-This is a test site 40
+This is a test site 22
 </p>
 </body>
 </html>
