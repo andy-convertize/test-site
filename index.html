@@ -1,45 +1,41 @@
 <html>
+
+
 <head>
-<script>
-	
- function getTopLevelDomain() {
-        var h;
-        var test_cookie = 'get_top_level_domain=cookie';
-        var hostname = document.location.hostname.split('.');
-	console.log(hostname);
-       for (var i = hostname.length - 1; i >= 0; i--) {
-            h = hostname.slice(i).join('.');
-        	console.log(h);    
-		document.cookie = test_cookie + ';domain=.' + h + ';';
-            if (document.cookie.indexOf(test_cookie) > -1) {
-                //document.cookie = test_cookie.split('=')[0] + '=;domain=.' + h + ';expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-                return h;
+    <script>
+
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
             }
-        }
-	document.cookie = 'no_TLD=true;'
-	//return "";
-    }
-    
+        };
 
-var td = getTopLevelDomain();
-    
-if(td) {
-	console.log("---- TD found");
-}
-else
-{
-	console.log("---- TD Not Found");
-}
 
- console.log("top Level " + getTopLevelDomain());
-	
-</script>
-<script src="//pixel-dev.convertize.io/22.js" charset="UTF-8"></script>
+
+        var my_awesome_script = document.createElement('script');
+        var id = parseInt(getUrlParameter('id'));
+        my_awesome_script.setAttribute('src','//pixel-dev.convertize.io/' + id + '.js');
+        document.head.appendChild(my_awesome_script);
+
+        document.write('<h1>TEST SITE ' + id + '</h1><p>Welcome to test site  ' + id + '</p>');
+
+    </script>
+
 </head>
+
 <body>
-<h1>HELLO WORLD</h1>
-<p>
-This is a test site 22
-</p>
+
+
+
 </body>
+
 </html>
