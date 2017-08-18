@@ -1,18 +1,31 @@
 <html>
 <head>
-<script>
-	
-	var date = new Date();
-	document.cookie = 'andy=' + date + ';domain=andy-convertize.github.io;path=/;secure';
-	console.log("Set Cookie on github.io");
-	
-</script>
-<script src="//pixel-dev.convertize.io/40.js" charset="UTF-8"></script>
+	<script src="//pixel-dev.convertize.io/22.js" charset="UTF-8"></script>
 </head>
 <body>
-<h1>HELLO WORLD</h1>
+<h1>Welcome to the Test Page</h1>
+<h2>Whats it all about</h2>
+<div>
 <p>
-This is a test site 40
+Paragraph 1
 </p>
+<p>
+Patragraph 2
+</p>
+<p>
+Paragraph 3
+</p>
+</div>
+<ul>
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+	<li>Item 4</li>
+</ul>
+
+<div style="position:absolute; left:200px; top:200px; background-color:red">
+I should be Moveable
+</div>
+
 </body>
 </html>
