@@ -1,19 +1,25 @@
 <html>
 <head>
-	<script src="//pixel-dev.convertize.io/22.js" charset="UTF-8"></script>
+	<script>
+
+		window.convertizePixelAPI = window.convertizePixelAPI || {};
+		window.convertizePixelAPI.num_products = 100;
+
+	</script>
+	<script src="//pixel-dev.convertize.io/26.js" charset="UTF-8"></script>
 </head>
 <body>
 <h1>Welcome to the Test Page</h1>
 <h2>Whats it all about</h2>
 <div>
 <p>
-Paragraph 1
+Paragraph 01
 </p>
 <p>
-Patragraph 2
+Patragraph 02
 </p>
 <p>
-Paragraph 3
+Paragraph 03
 </p>
 </div>
 <ul>
