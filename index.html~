@@ -1,12 +1,6 @@
 <html>
 <head>
-	<script>
-
-		window.convertizePixelAPI = window.convertizePixelAPI || {};
-		window.convertizePixelAPI.num_products = 100;
-
-	</script>
-	<script src="//pixel-dev.convertize.io/26.js" charset="UTF-8"></script>
+	<script src="//pixel-dev.convertize.io/24.js" charset="UTF-8"></script>
 </head>
 <body>
 <h1>Welcome to the Test Page</h1>
